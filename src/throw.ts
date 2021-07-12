@@ -9,6 +9,9 @@ export const throwPage = async (request: Request): Promise<Response> => {
     case "string": {
       throw "[be3bd631] Thrown string";
     }
+    case "error": {
+      throw new Error("[735ff7c3] Thrown Error");
+    }
     case "fetch": {
       await fetch("[626b61d9] Failed fetch");
       return new Response("[b0978a42] Failed fetch response");
